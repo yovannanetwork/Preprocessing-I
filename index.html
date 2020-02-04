@@ -5,7 +5,8 @@
   <meta charset="utf-8">
 
   <title>My Resume</title>
-
+  <link rel="stylesheet" href="icons/style.css">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/index.css">
 
   <!--[if lt IE 9]>
@@ -14,6 +15,110 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <header>
+     <div class="container">
+         <div class="nav">
+      <div class="navigation">
+          <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+          </ul>
+      </div>
+      <div class="navigation">
+          <img src="imagen/logo3.png" alt="logo">
+      </div>
+      <div class="navigation">
+          <ul>
+              <li><a href="">Portafolio</a></li>
+              <li><a href="">Contact</a></li>
+          </ul>
+      </div>
+    </div>
+     </div>
+  </header>
+  <section class="about">
+      <div class="about-center">
+          <h1> Yovanna Huanahue</h1>
+          <button>Know me more </button>
+      </div>
+  </section>
+  <section class="skills">
+      <div class="container">
+          <div class="hob hob1">
+          <h2>Why should i be</h2>
+          <p>My experience with technology and, in particular, my ability to maintain and update websites, make me a good match for this position. My most recent work was this page, I did  my best work to get master the skills.</p>
+          
+          <p>I am doing well  to maintaining my web pages.  In my free time, I made many pages using all the skills that i got from Lambda school . I then used my coding skills to revamp some pages. I would love to bring my coding skills and my general passion for learning new technologies to this position.</p>
+      </div>
+      <div class="hob">
+          <h2>Skills</h2>
+          <ul>
+              <li> Using boostrap grid </li>
+              <li> HTML</li>
+              <li> CSS</li>
+              <li>Java Script</li>
+          </ul>
+      </div>
+      </div>
+  </section>
+  <section class="portafolio">
+      <div class="container">
+            <h2>Work History</h2>
+             <table>
+                 <tr>
+                     <th>Yrs</th>
+                     <th>Company</th>
+                     <th>Title</th>
+                     <th>Tech used</th>
+                 </tr>
+                 <tr>
+                     <td>1</td>
+                     <td>Apple</td>
+                     <td>Software Engineer</td>
+                     <td>Swift</td>
+                 </tr>
+                 <tr>
+                     <td>2</td>
+                     <td>Microsoft</td>
+                     <td>Computer Scientist</td>
+                     <td>.NET</td>
+                 </tr>
+                 <tr>
+                     <td>3</td>
+                     <td>Amazon</td>
+                     <td>Dev Ops</td>
+                     <td>AWS</td>
+                 </tr>
+             </table>
+             <h3><strong>If you want to see my works</strong></h3>
+          <button>See github</button>
+          
+      </div>
+  </section>
+  <footer class="contact">
+      <div class="container">
+          <h2>Contact me</h2>
+      <p>Ready to start your next project? Do you like what you have seen? Great! Give me a call or send me an email and I will answer you as quickly as I can! </p>
+      <p class="icon"><i class="icon-phone"></i>914-345-8765</p>
+      <form action="#" method="post">
+          <div>
+            <div class="row">
+				<div class="input">
+				     <input type="text" name="name" placeholder="Name" />
+				</div>
+				<div class="input">
+				    <input type="text" name="email" placeholder="Email" />
+                </div>
+				<div class="input">
+				    <textarea name="message" placeholder="Message" rows="6"></textarea>
+				</div>
+				<div class="submit">
+				    <input type="submit" value="Send Message"/>
+				</div>
+           </div>
+           </div>
+        </form>
+      </div>
+  </footer>
 </body>
 </html>

@@ -1,1 +1,383 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("fontawesome-all.min.css");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkids18E.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red;*/
+}
+html,
+body {
+  height: 100%;
+}
+.buttonPage {
+  background-color: #f05f40;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #f05f40;
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #fff;
+}
+body .container {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  body .container {
+    width: 90%;
+  }
+}
+body h2 {
+  font-size: 2rem;
+  padding: 10px 0;
+}
+body header {
+  background-color: #040505;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 1px 3px 5px rgba(255, 167, 0, 0.24);
+}
+body header .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body header .nav img {
+  width: 50px;
+  margin: 0 4rem;
+  padding-top: 10px;
+}
+@media (max-width: 500px) {
+  body header .nav img {
+    display: none;
+  }
+}
+body header .nav ul li {
+  display: inline-block;
+  position: relative;
+}
+body header .nav ul li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+  display: block;
+  margin-right: 2rem;
+  color: #fff;
+}
+@media (max-width: 800px) {
+  body header .nav ul li a {
+    padding: 1.2rem 0.1rem;
+  }
+}
+@media (max-width: 500px) {
+  body header .nav ul li a {
+    padding: 1.2rem 0;
+    font-size: 0.7rem;
+  }
+}
+body .about {
+  background-image: url(/imagen/gifportada.gif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 580px;
+}
+@media (max-width: 500px) {
+  body .about {
+    background-image: none;
+    background-color: #dddddd;
+  }
+}
+body .about .about-center {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 40%;
+}
+body .about .about-center h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+body .about .about-center button {
+  background-color: #f05f40;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #f05f40;
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #fff;
+}
+body .skills {
+  background-color: #f05f40;
+}
+body .skills .hob1 p {
+  padding-right: 10px;
+}
+body .skills .hob {
+  padding: 40px 0;
+  width: 49.8%;
+  display: inline-block;
+}
+body .skills .hob ul {
+  border: 1px solid black;
+  width: 80%;
+}
+body .skills .hob ul li {
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid black;
+}
+body .skills .hob ul:last-child {
+  border-bottom: none;
+}
+@media (max-width: 800px) {
+  body .skills .hob ul {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  body .skills .hob {
+    width: 49.6%;
+  }
+  body .skills .hob:nth-child(2) {
+    position: relative;
+    bottom: 50px;
+  }
+}
+@media (max-width: 500px) {
+  body .skills .hob {
+    width: 100%;
+  }
+}
+body .portafolio {
+  text-align: center;
+  padding: 30px 0;
+}
+body .portafolio table {
+  width: 100%;
+  border-collapse: collapse;
+}
+body .portafolio table th,
+body .portafolio table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+body .portafolio table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+body .portafolio h3 {
+  padding: 20px 0 0 0;
+  font-size: 1.2rem;
+}
+body .portafolio button {
+  background-color: #f05f40;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #f05f40;
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #fff;
+}
+body footer {
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  padding: 40px 0;
+}
+body footer p {
+  margin: 20px 0;
+}
+body footer p i {
+  padding-right: 10px;
+}
+body footer .input {
+  margin: 10px 0;
+}
+body footer .input input {
+  width: 50%;
+  height: 2rem;
+  border: 1px solid #f05f40;
+  border-radius: 5px;
+}
+@media (max-width: 500px) {
+  body footer .input input {
+    width: 100%;
+  }
+}
+body footer .input textarea {
+  width: 50%;
+  border: 1px solid #f05f40;
+  border-radius: 5px;
+}
+@media (max-width: 500px) {
+  body footer .input textarea {
+    width: 100%;
+  }
+}
+body footer .submit {
+  text-align: center;
+}
+body footer .submit input {
+  background-color: #f05f40;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #f05f40;
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #fff;
+}
