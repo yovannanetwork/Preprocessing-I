@@ -49,11 +49,272 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+//@import url("fontawesome-all.min.css");
 * {
     box-sizing: border-box;
+   /* outline: 1px solid red;*/
 }
 
 html, body {
     height: 100%;
 }
+@width: 80%;
+@button: rgb(240,95,64);
+@fontbutton: 1rem;
+@menu: #fff;
+@head-footer: rgb(4,5,5,5);
+//MIXINS
+.buttonPage{
+    background-color: @button;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid @button;
+    margin: 20px 0;
+    font-size: @fontbutton;
+    color: @menu;
+}
+.title-font{
+    font-family: "Abril Fatface", "serif";
+}
+.a-link{
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    color: @menu;
+}
+p, li, table{
+    font-size: 1.2rem;
+}
+//code
+.container{
+        width: @width;
+        margin: auto;
+        @media (max-width: 500px){
+            width: 90%;
+        }//@media query 500px conatiner
+    }
+ h2{
+        font-size: 2rem;
+        padding: 10px 0;
+        .title-font();
+    }//h2
+ header{
+        background-color: @head-footer;
+        position: fixed;
+        width: @width + 20%;
+        z-index: 1000;
+        box-shadow: 1px 3px 5px rgba(255, 167, 0, 0.24);
+        .nav{
+            display: flex;            
+            flex-wrap: wrap;
+            justify-content: center;
+            img{
+                width: 50px;
+                margin: 0 4rem;
+                padding-top: 10px;
+                @media (max-width: 500px){
+                    display: none;
+                }//@media img
+            }//img
+            ul{
+                li{
+                    display: inline-block;
+                    position: relative;
+                    a{
+                        .a-link();
+                        //text-decoration: none;
+                        //font-size: 1.3rem;
+                        //padding: 1.5rem;
+                        //transition: all 0.2s;
+                        display: block;
+                        margin-right: 2rem;
+                        //color: @menu;
+                        @media (max-width: 800px){
+                            padding: 1.2rem 0.1rem;
+                        }//@media a 800px
+                        @media (max-width: 500px){
+                            padding: 1.2rem 0;
+                            font-size: 0.7rem;
+                        }//@media a 500px
+                    }//a
+            }//li
+            }
+            
+        }
+    }//header
+        .about{
+            background-image: url(/imagen/gifportada.gif);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 580px;
+            
+            .about-center{
+                width: 50%;
+                margin: auto;
+                text-align: center;
+                position: relative;
+                top: 40%;
+                h1{
+                    font-size: 3rem;
+                    font-weight: 500;
+                    .title-font();
+                }
+                button{
+                    .buttonPage();
+                    a{
+                        .a-link();
+                    }
+                }
+                
+            }//div.about-center
+            @media (max-width:500px){
+                background-image: none;
+                background-color: #dddddd;    
+            }//@media 500px
+        }//section.about
+
+    //SECTION SKILLLS
+        .skills{
+            background-color: @button;
+            .hob1{
+                
+                p{
+                    padding-right: 10px;
+                    line-height: 1.5;
+                    margin-bottom: 10px;
+                }
+            }//div.hob1
+            .hob{
+                padding: 40px 0;
+                width: 49.8%;
+                display: inline-block;
+                ul{
+                    border: 1px solid black;
+                    width: 80%;
+                    position: relative;
+                    
+                    li{ 
+                      padding: 10px 0 10px 10px;
+                      border-bottom: 1px solid black;
+                    }
+                    &:last-child{
+                    border-bottom: none;
+                  }//ul last-child
+                    @media (max-width: 800px){
+                        width: 100%;
+                    }
+                }//ul
+                &:nth-child(2){
+                    position: relative;
+                    bottom: 100px;
+                }
+                @media (max-width:800px){
+                    width: 49.6%;
+                    &:nth-child(2){
+                        position: relative;
+                        bottom: 270px;
+                    }
+                }//@media query 800px .hob
+                @media (max-width: 500px){
+                    width: 100%;
+                    &:nth-child(2){
+                        position: relative;
+                        bottom: 0;
+                    }
+                }
+            }
+        }//Section skills
+    .portafolio{
+        text-align: center;
+        padding: 30px 0;
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            th, td{
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }//th, td
+            tr:nth-child(even){
+                background-color: #dddddd;
+            }//tr
+        }//table
+        h3{
+            padding: 20px 0 0 0;
+            font-size: 1.2rem;
+        }
+        button{
+            .buttonPage();
+            a{
+                .a-link();
+            }
+        }
+    }//section portafolio
+    footer{
+        text-align: center;
+        background-color: black;
+        color: @menu;
+        padding: 40px 0;
+        p{
+            margin: 20px 0;
+            i{
+                padding-right: 10px;
+            }
+        }
+        .input{
+            margin: 10px 0;
+            input{
+                width: 50%;
+                height: 2rem;
+                border: 1px solid @button;
+                border-radius: 5px;
+                @media (max-width: 500px){
+                     width: 100%;
+                }//media query 500px input
+           }//input
+            textarea{
+                width: 50%;
+                border: 1px solid @button;
+                border-radius: 5px;
+                @media (max-width: 500px){
+                    width: 100%;
+              }//media query 500px textarea
+            }
+        }//div.input
+        .submit {
+            text-align: center;
+            input{
+                .buttonPage();
+            }
+        }
+        
+    }//footer
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
