@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("fontawesome-all.min.css");
 html,
 body,
 div,
@@ -169,46 +168,55 @@ body {
   font-size: 1rem;
   color: #fff;
 }
-body .container {
+.title-font {
+  font-family: "Abril Fatface", "serif";
+}
+p,
+li,
+table {
+  font-size: 1.2rem;
+}
+.container {
   width: 80%;
   margin: auto;
 }
 @media (max-width: 500px) {
-  body .container {
+  .container {
     width: 90%;
   }
 }
-body h2 {
+h2 {
   font-size: 2rem;
   padding: 10px 0;
+  font-family: "Abril Fatface", "serif";
 }
-body header {
+header {
   background-color: #040505;
   position: fixed;
   width: 100%;
   z-index: 1000;
   box-shadow: 1px 3px 5px rgba(255, 167, 0, 0.24);
 }
-body header .nav {
+header .nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-body header .nav img {
+header .nav img {
   width: 50px;
   margin: 0 4rem;
   padding-top: 10px;
 }
 @media (max-width: 500px) {
-  body header .nav img {
+  header .nav img {
     display: none;
   }
 }
-body header .nav ul li {
+header .nav ul li {
   display: inline-block;
   position: relative;
 }
-body header .nav ul li a {
+header .nav ul li a {
   text-decoration: none;
   font-size: 1.3rem;
   padding: 1.5rem;
@@ -218,17 +226,17 @@ body header .nav ul li a {
   color: #fff;
 }
 @media (max-width: 800px) {
-  body header .nav ul li a {
+  header .nav ul li a {
     padding: 1.2rem 0.1rem;
   }
 }
 @media (max-width: 500px) {
-  body header .nav ul li a {
+  header .nav ul li a {
     padding: 1.2rem 0;
     font-size: 0.7rem;
   }
 }
-body .about {
+.about {
   background-image: url(/imagen/gifportada.gif);
   background-size: cover;
   background-attachment: fixed;
@@ -236,24 +244,19 @@ body .about {
   background-repeat: no-repeat;
   height: 580px;
 }
-@media (max-width: 500px) {
-  body .about {
-    background-image: none;
-    background-color: #dddddd;
-  }
-}
-body .about .about-center {
+.about .about-center {
   width: 50%;
   margin: auto;
   text-align: center;
   position: relative;
   top: 40%;
 }
-body .about .about-center h1 {
+.about .about-center h1 {
   font-size: 3rem;
   font-weight: 500;
+  font-family: "Abril Fatface", "serif";
 }
-body .about .about-center button {
+.about .about-center button {
   background-color: #f05f40;
   padding: 10px 30px;
   border-radius: 10px;
@@ -262,69 +265,86 @@ body .about .about-center button {
   font-size: 1rem;
   color: #fff;
 }
-body .skills {
+@media (max-width: 500px) {
+  .about {
+    background-image: none;
+    background-color: #dddddd;
+  }
+}
+.skills {
   background-color: #f05f40;
 }
-body .skills .hob1 p {
+.skills .hob1 p {
   padding-right: 10px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
-body .skills .hob {
+.skills .hob {
   padding: 40px 0;
   width: 49.8%;
   display: inline-block;
 }
-body .skills .hob ul {
+.skills .hob ul {
   border: 1px solid black;
   width: 80%;
+  position: relative;
 }
-body .skills .hob ul li {
+.skills .hob ul li {
   padding: 10px 0 10px 10px;
   border-bottom: 1px solid black;
 }
-body .skills .hob ul:last-child {
+.skills .hob ul:last-child {
   border-bottom: none;
 }
 @media (max-width: 800px) {
-  body .skills .hob ul {
+  .skills .hob ul {
     width: 100%;
   }
 }
+.skills .hob:nth-child(2) {
+  position: relative;
+  bottom: 100px;
+}
 @media (max-width: 800px) {
-  body .skills .hob {
+  .skills .hob {
     width: 49.6%;
   }
-  body .skills .hob:nth-child(2) {
+  .skills .hob:nth-child(2) {
     position: relative;
-    bottom: 50px;
+    bottom: 270px;
   }
 }
 @media (max-width: 500px) {
-  body .skills .hob {
+  .skills .hob {
     width: 100%;
   }
+  .skills .hob:nth-child(2) {
+    position: relative;
+    bottom: 0;
+  }
 }
-body .portafolio {
+.portafolio {
   text-align: center;
   padding: 30px 0;
 }
-body .portafolio table {
+.portafolio table {
   width: 100%;
   border-collapse: collapse;
 }
-body .portafolio table th,
-body .portafolio table td {
+.portafolio table th,
+.portafolio table td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
-body .portafolio table tr:nth-child(even) {
+.portafolio table tr:nth-child(even) {
   background-color: #dddddd;
 }
-body .portafolio h3 {
+.portafolio h3 {
   padding: 20px 0 0 0;
   font-size: 1.2rem;
 }
-body .portafolio button {
+.portafolio button {
   background-color: #f05f40;
   padding: 10px 30px;
   border-radius: 10px;
@@ -333,46 +353,46 @@ body .portafolio button {
   font-size: 1rem;
   color: #fff;
 }
-body footer {
+footer {
   text-align: center;
   background-color: black;
   color: #fff;
   padding: 40px 0;
 }
-body footer p {
+footer p {
   margin: 20px 0;
 }
-body footer p i {
+footer p i {
   padding-right: 10px;
 }
-body footer .input {
+footer .input {
   margin: 10px 0;
 }
-body footer .input input {
+footer .input input {
   width: 50%;
   height: 2rem;
   border: 1px solid #f05f40;
   border-radius: 5px;
 }
 @media (max-width: 500px) {
-  body footer .input input {
+  footer .input input {
     width: 100%;
   }
 }
-body footer .input textarea {
+footer .input textarea {
   width: 50%;
   border: 1px solid #f05f40;
   border-radius: 5px;
 }
 @media (max-width: 500px) {
-  body footer .input textarea {
+  footer .input textarea {
     width: 100%;
   }
 }
-body footer .submit {
+footer .submit {
   text-align: center;
 }
-body footer .submit input {
+footer .submit input {
   background-color: #f05f40;
   padding: 10px 30px;
   border-radius: 10px;

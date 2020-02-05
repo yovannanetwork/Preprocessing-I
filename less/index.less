@@ -50,7 +50,7 @@ table {
 
 /* Set every element's box-sizing to border-box */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-@import url("fontawesome-all.min.css");
+//@import url("fontawesome-all.min.css");
 * {
     box-sizing: border-box;
    /* outline: 1px solid red;*/
@@ -64,6 +64,7 @@ html, body {
 @fontbutton: 1rem;
 @menu: #fff;
 @head-footer: rgb(4,5,5,5);
+//MIXINS
 .buttonPage{
     background-color: @button;
     padding: 10px 30px;
@@ -73,23 +74,29 @@ html, body {
     font-size: @fontbutton;
     color: @menu;
 }
-
-body{
-    .container{
+.title-font{
+    font-family: "Abril Fatface", "serif";
+}
+p, li, table{
+    font-size: 1.2rem;
+}
+//code
+.container{
         width: @width;
         margin: auto;
         @media (max-width: 500px){
             width: 90%;
         }//@media query 500px conatiner
     }
-    h2{
+ h2{
         font-size: 2rem;
         padding: 10px 0;
+        .title-font();
     }//h2
-    header{
+ header{
         background-color: @head-footer;
         position: fixed;
-        width: 100%;
+        width: @width + 20%;
         z-index: 1000;
         box-shadow: 1px 3px 5px rgba(255, 167, 0, 0.24);
         .nav{
@@ -136,10 +143,7 @@ body{
             background-position: center;
             background-repeat: no-repeat;
             height: 580px;
-            @media (max-width:500px){
-                background-image: none;
-                background-color: #dddddd;    
-            }//@media 500px
+            
             .about-center{
                 width: 50%;
                 margin: auto;
@@ -149,13 +153,19 @@ body{
                 h1{
                     font-size: 3rem;
                     font-weight: 500;
+                    .title-font();
                 }
                 button{
                     .buttonPage();
                 }
                 
             }//div.about-center
-        }
+            @media (max-width:500px){
+                background-image: none;
+                background-color: #dddddd;    
+            }//@media 500px
+        }//section.about
+
     //SECTION SKILLLS
         .skills{
             background-color: @button;
@@ -163,6 +173,8 @@ body{
                 
                 p{
                     padding-right: 10px;
+                    line-height: 1.5;
+                    margin-bottom: 10px;
                 }
             }//div.hob1
             .hob{
@@ -172,6 +184,7 @@ body{
                 ul{
                     border: 1px solid black;
                     width: 80%;
+                    position: relative;
                     
                     li{ 
                       padding: 10px 0 10px 10px;
@@ -184,15 +197,23 @@ body{
                         width: 100%;
                     }
                 }//ul
+                &:nth-child(2){
+                    position: relative;
+                    bottom: 100px;
+                }
                 @media (max-width:800px){
                     width: 49.6%;
                     &:nth-child(2){
                         position: relative;
-                        bottom: 50px;
+                        bottom: 270px;
                     }
                 }//@media query 800px .hob
                 @media (max-width: 500px){
                     width: 100%;
+                    &:nth-child(2){
+                        position: relative;
+                        bottom: 0;
+                    }
                 }
             }
         }//Section skills
@@ -259,7 +280,6 @@ body{
         
     }//footer
    
-}
 
 
 
