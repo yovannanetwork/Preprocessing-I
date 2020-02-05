@@ -171,6 +171,13 @@ body {
 .title-font {
   font-family: "Abril Fatface", "serif";
 }
+.a-link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
+  color: #fff;
+}
 p,
 li,
 table {
@@ -221,9 +228,9 @@ header .nav ul li a {
   font-size: 1.3rem;
   padding: 1.5rem;
   transition: all 0.2s;
+  color: #fff;
   display: block;
   margin-right: 2rem;
-  color: #fff;
 }
 @media (max-width: 800px) {
   header .nav ul li a {
@@ -263,6 +270,13 @@ header .nav ul li a {
   border: 1px solid #f05f40;
   margin: 20px 0;
   font-size: 1rem;
+  color: #fff;
+}
+.about .about-center button a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
   color: #fff;
 }
 @media (max-width: 500px) {
@@ -351,6 +365,13 @@ header .nav ul li a {
   border: 1px solid #f05f40;
   margin: 20px 0;
   font-size: 1rem;
+  color: #fff;
+}
+.portafolio button a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  transition: all 0.2s;
   color: #fff;
 }
 footer {

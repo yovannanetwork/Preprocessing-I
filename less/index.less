@@ -77,6 +77,13 @@ html, body {
 .title-font{
     font-family: "Abril Fatface", "serif";
 }
+.a-link{
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    color: @menu;
+}
 p, li, table{
     font-size: 1.2rem;
 }
@@ -116,13 +123,14 @@ p, li, table{
                     display: inline-block;
                     position: relative;
                     a{
-                        text-decoration: none;
-                        font-size: 1.3rem;
-                        padding: 1.5rem;
-                        transition: all 0.2s;
+                        .a-link();
+                        //text-decoration: none;
+                        //font-size: 1.3rem;
+                        //padding: 1.5rem;
+                        //transition: all 0.2s;
                         display: block;
                         margin-right: 2rem;
-                        color: @menu;
+                        //color: @menu;
                         @media (max-width: 800px){
                             padding: 1.2rem 0.1rem;
                         }//@media a 800px
@@ -157,6 +165,9 @@ p, li, table{
                 }
                 button{
                     .buttonPage();
+                    a{
+                        .a-link();
+                    }
                 }
                 
             }//div.about-center
@@ -238,6 +249,9 @@ p, li, table{
         }
         button{
             .buttonPage();
+            a{
+                .a-link();
+            }
         }
     }//section portafolio
     footer{
