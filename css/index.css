@@ -263,6 +263,9 @@ header .nav ul li a {
   font-weight: 500;
   font-family: "Abril Fatface", "serif";
 }
+.about .about-center h2 {
+  color: #f05f40;
+}
 .about .about-center button {
   background-color: #f05f40;
   padding: 10px 30px;
